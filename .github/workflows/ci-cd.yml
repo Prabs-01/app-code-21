@@ -68,5 +68,5 @@ jobs:
           IMAGE="${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ secrets.ROLLNO }}"
           echo "Using image: $IMAGE"
           docker pull $IMAGE
-          docker stop doc-container || true && docker rm doc-container || true
-          docker run -d --name doc-container -p 3111:3111 $IMAGE
+          docker stop doc-container2 || true && docker rm doc-container2 || true
+          docker run -d --name doc-container2 -p 2111:2111 $IMAGE
