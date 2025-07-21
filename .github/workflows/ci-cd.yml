@@ -30,7 +30,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd app
         npm install
 
     - name: Log in to DockerHub
